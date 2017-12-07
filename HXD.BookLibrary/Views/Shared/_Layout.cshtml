@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - 我的 ASP.NET 应用程序</title>
+    @Styles.Render("~/Content/main.css")
+</head>
+<body>
+    <div id="header">
+        <div id="nav">
+            <div id="logo">
+                <a href="#">
+                    <img src="~/Content/Images/logo.png" height="72" title="书林" />
+                </a>
+            </div>
+            <ul class="nav-item">
+                <li><a href="#">所有标签</a></li>
+                <li><a href="#">关于</a></li>
+            </ul>
+        </div>
+    </div>
+    @RenderBody()
+    <div id="footer">
+        <p>电子书资源声明：本站所有电子书来源于网络，若下载链接侵犯到版权方，请联系站长，站长核实后会第一时间移除，谢谢！ </p>
+    </div>
+</body>
+</html>

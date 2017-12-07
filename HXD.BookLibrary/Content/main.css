@@ -1,0 +1,197 @@
+﻿@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* nav */
+#header {
+    height: 72px;
+    background-color: #fff;
+    border-bottom: 1px solid #808080;
+}
+
+
+#logo, .nav-item li {
+    float: left;
+}
+
+    #logo a {
+        display: block;
+        width: auto;
+        height: 72px;
+    }
+
+
+#nav {
+    margin: 0 28px 0 24px;
+    box-shadow: 0 4px 8px 0 rgba(7,17,27,.1);
+}
+
+.nav-item a {
+    padding: 0 20px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    line-height: 72px;
+    transition: background-color .3s;
+    position: relative;
+    color: #4D555D;
+}
+
+    .nav-item a:hover {
+        color: #3f444a;
+    }
+
+/* end nav */
+
+
+#wrapper {
+    width: 1040px;
+    margin: 0 auto;
+    background-color: pink;
+}
+
+.wrapperLeft {
+    width: 735px;
+    margin-top: 50px;
+    float: left;
+}
+
+    .wrapperLeft .booklist li {
+        float: left;
+        margin: 10px;
+        margin-bottom: 62px;
+        height: 150px;
+    }
+
+
+.cover img {
+    border-radius: 4px;
+    border: 2px solid #4D555D;
+    padding: 4px;
+}
+
+
+    .cover img:hover {
+        background-color: #cfc0c0;
+    }
+
+
+.clearfix {
+    content: "";
+    line-height: 0;
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.pager {
+    font-size: 0;
+    line-height: 35px;
+    color: #4D555D;
+    text-align: center;
+    margin-top: 30px;
+    height: 35px;
+}
+
+    .pager .pager-next,.pager span {
+        border: 1px solid #4D555D;
+        padding: 4px 8px;
+        color: #4D555D;
+        margin-left: 10px;
+    }
+
+    .pager .pager-prev {
+        border: 1px solid #4D555D;
+        color: #4D555D;
+        padding: 4px 8px;
+        margin-left: 10px;
+    }
+
+    .pager a {
+        border-radius: 4px;
+        text-decoration: none;
+        padding: 4px 8px;
+        border: 1px solid #4D555D;
+        color: #4D555D;
+        margin-left: 10px;
+    }
+
+        .pager a:hover {
+            background-color: #fc041b;
+            color: #fff;
+        }
+
+    .pager .active {
+        border: 1px solid #4D555D;
+        padding: 4px 8px;
+        color: #4D555D;
+        background-color: #fc041b;
+        color: #fff;
+        margin-left: 10px;
+    }
+
+.title a {
+    color: #3377aa;
+}
+
+    .title a:hover {
+        background: #3377aa;
+        color: #fff;
+    }
+
+.author span {
+    color: #333333;
+}
+
+.wrapperRight {
+    float: right;
+    margin-top: 60px;
+}
+
+.tag {
+    height: 270px;
+    background-color: yellow;
+}
+
+    .tag a {
+        background: pink;
+        padding: 5px;
+    }
+
+.money {
+    margin-top: 10px;
+    height: 300px;
+}
+
+.money-alipay {
+    text-align: center;
+}
+
+.money-wechat {
+    text-align: center;
+}
+
+/* footer */
+#footer {
+    margin-top: 5px;
+    text-align: center;
+    clear: both;
+    height: 50px;
+    line-height: 50px;
+    border-top: 2px solid #f5f5f5;
+}
+/* end footer */

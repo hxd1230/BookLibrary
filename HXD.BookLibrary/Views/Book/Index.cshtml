@@ -1,0 +1,73 @@
+﻿@using HXD.BookLibrary.Models.ViewModels;
+@using HXD.BookLibrary.Models;
+@model BookListViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="wrapper">
+    <div class="wrapperLeft">
+        <ul class="booklist">
+            @foreach (Book book in Model.Books)
+            {
+                <li>
+                    <div class="cover">
+                        <a href="#">
+                            <img src="~/Content/Images/book.png" width="115" height="172" />
+                        </a>
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            <a href="@Url.Action("Details", new { Id = book.Id })">@book.Name</a>
+                        </div>
+                        <div class="author">
+                            <span>@book.Author</span>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+        <div class="clearfix"></div>
+        <div class="pager">
+            <span class="pager-prev">&lt;</span>
+            @for (int i = 1; i <= Model.PageHelper.RecordCount; i++)
+            {
+                if (i == 1)
+                {
+                    <span class="@(Model.PageHelper.CurrentPage==i?"active":"")">@i</span>
+                }
+                else
+                {
+                    <a class="@(Model.PageHelper.CurrentPage==i?"active":"")" href="@Url.Action("Index", new { pageIndex = i })">@i</a>
+                }
+            }
+            <a href="@Url.Action("Index", new { pageIndex = (Model.PageHelper.CurrentPage + 1) })" class=" pager-next">&gt;</a>
+
+
+
+
+            @*<a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>*@
+
+        </div>
+    </div>
+    <div class="wrapperRight">
+        <div class="tag">
+            <a href="#">.Net</a>
+            <a href="#">.Net</a>
+            <a href="#">.Net</a>
+            <a href="#">.Net</a>
+        </div>
+        <div class="money">
+            <div class="money-alipay">
+                <h3 style="color:#00A0E8;">支付宝扫一扫捐赠</h3>
+                <img src="~/Content/Images/alipay.png" width="250" height="250" />
+            </div>
+            <div class="money-wechat">
+                <h3 style="color:#22A93B;">微信扫一扫捐赠</h3>
+                <img src="~/Content/Images/wechat.png" width="250" height="250" />
+            </div>
+        </div>
+    </div>
+</div>
